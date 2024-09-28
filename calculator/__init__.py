@@ -1,6 +1,6 @@
 
 from calculator.operations import add, subtract, divide, multiply
-from calculator.Calculation import Calculation
+from calculator.calculation import Calculation
 
 class Calculator:
     @staticmethod

@@ -1,11 +1,24 @@
-def add(a,b):
-    return a + b
 
-def subtract(a,b):
-    return a - b
+from calculator.operations import add, subtract, divide, multiply
+from calculator.Calculation import Calculation
 
-def multiply(a,b):
-    return a * b
+class Calculator:
+    @staticmethod
+    def add(a, b):
+        calculation = Calculation(a ,b, add)
+        return calculation.Output()
+    
+    @staticmethod
+    def subtract(a, b):
+        calculation = Calculation(a ,b, subtract)
+        return calculation.Output()
 
-def divide(a,b):
-    return a / b
+    @staticmethod
+    def multiply(a, b):
+        calculation = Calculation(a ,b, multiply)
+        return calculation.Output()
+    
+    @staticmethod
+    def divide(a, b):
+        calculation = Calculation(a, b, divide)
+        return calculation.Output()
